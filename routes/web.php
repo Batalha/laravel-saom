@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('SP/os', 'SP\OsController@index');
+Route::get('BH/os', 'BH\OsController@index');

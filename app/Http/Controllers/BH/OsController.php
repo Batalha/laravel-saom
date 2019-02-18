@@ -27,7 +27,7 @@ class OsController extends Controller
     public function index()
     {
 
-        //
+        return $this->service->lista();
     }
 
     /**
