@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('SP/os', 'SP\OsController@index');
 Route::get('BH/os', 'BH\OsController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

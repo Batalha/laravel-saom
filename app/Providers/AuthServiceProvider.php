@@ -2,8 +2,9 @@
 
 namespace Saom\Providers;
 
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Saom\Auth\UsuarioProvider;
+
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        \Auth::provider('usuarios', function ($app, array $config){
+            return new UsuarioProvider($app['hash'], $config['model']);
+        });
     }
 }
