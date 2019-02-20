@@ -21,13 +21,11 @@ class CreateUsuariosTable extends Migration
             $table->string('telefone');
             $table->string('login');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('senha');
             $table->integer('perfis_idperfis');
             $table->integer('empresas_idempresas');
             $table->tinyInteger('incidente');
             $table->integer('subperfil_idsubperfil');
-            $table->tinyInteger('subperfil_idsubperfil');
             $table->integer('saom');
             $table->char('ativacao');
             $table->rememberToken();
